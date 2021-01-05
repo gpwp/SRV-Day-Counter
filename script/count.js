@@ -19,7 +19,7 @@ function clock(){
 }
 
 function discharge_clock(){
-    var date = new Date('2022-11-17 09:00:00');
+    var date = new Date('2022-11-17T09:00:00');
     var year = date.getFullYear();
     var month = date.getMonth();
     var day = date.getDate();
@@ -33,7 +33,7 @@ function discharge_clock(){
 }
 
 function start_clock(){
-    var date = new Date('2020-12-18 18:00:00');
+    var date = new Date('2020-12-18T18:00:00');
     var year = date.getFullYear();
     var month = date.getMonth();
     var day = date.getDate();
@@ -43,6 +43,7 @@ function start_clock(){
     var second = date.getSeconds();
     var week = ['일', '월', '화', '수', '목', '금', '토'];
 
+    // console.log(date);
     startClock.innerText = `군복무 시작 : ${year} ${month+1}월 ${day}일 ${week[weekday]}요일 ` + `${hour < 10 ? `0${hour}` : hour}:${minute < 10 ? `0${minute }`  : minute }:${second < 10 ? `0${second }`  : second }`;
 }
 
@@ -53,7 +54,7 @@ function numberWithCommas(x) {
 
 function date_diff(){
     var sdt = new Date();
-    var edt = new Date('2022-11-17 09:00:00');
+    var edt = new Date('2022-11-17T09:00:00');
     var dateDiff = Math.ceil((edt.getTime()-sdt.getTime())/(1000));
 
     diffClock.innerText = numberWithCommas(dateDiff) + ' 초'; 
